@@ -52,9 +52,6 @@ npm i redux react-redux --save
 
 <br>
 
-
-![img](/home/ross-u/Desktop/IronHack_Lectures_done/content/module3/02-Week2/Day 3/redux flow.png)
-
 <br>
 
 
