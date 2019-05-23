@@ -63,10 +63,6 @@ class ProjectDetails extends Component {
     return (
       <div>
 
-      <h1 style={{fontSize: '30px', color: 'red'}}>This component is not connected to Redux</h1>
-        <h1 style={{fontSize: '26px', color: 'red'}}>You can connect it by using `connect`, and  `mapStateToProps` and `mapDispatchToProps` </h1>
-
-
         <h1>{this.state.title}</h1>
         <h4>{this.state.description}</h4>
         <Link to={'/projects'}>
