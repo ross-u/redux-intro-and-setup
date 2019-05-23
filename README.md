@@ -4,7 +4,7 @@
 
 
 
-### Clone the starter repository and checkout to branch `starter-code`
+### Clone the starter repository and checkout to the branch `starter-code`
 
 
 
