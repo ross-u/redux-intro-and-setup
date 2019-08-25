@@ -1,47 +1,40 @@
 // components/projects/ProjectList.js
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import AddProject from './AddProject';
-import data from './../../data'
-
+import Project from './Project';
 
 class ProjectList extends Component {
+  state = {
+    listOfProjects: [],
+  };
 
   getAllProjects = () => {
-    axios.get(`http://localhost:5000/api/projects`)
-      .then((apiResponse) => {
-        this.setState({ listOfProjects: apiResponse.data })
-      })
-  }
+    axios.get(`http://localhost:5000/api/projects`).then(response => {
+      this.setState({ listOfProjects: response.data });
+    });
+  };
 
   componentDidMount() {
-    this.getAllProjects();  
+    this.getAllProjects();
   }
 
   render() {
+    const { listOfProjects } = this.state;
 
-    return(
-      <div>        
-        <AddProject getData={this.getAllProjects} />   
+    return (
+      <div>
+        <AddProject updateProjectList={this.getAllProjects} />
         <div>
-          { 
-            this.props.projects.map( (project) => {
-            return (
-              <div key={project._id} className='project'>
-                <Link to={`/projects/${project._id}`}>
-                  <h3>{project.title}</h3>
-                  <p>{project.description} </p>
-                </Link>
-              </div>
-            )})
-          }
+          {listOfProjects &&
+            listOfProjects.map(project => {
+              return <Project projectData={project} key={project._id} />;
+            })}
         </div>
-
       </div>
-    )
+    );
   }
 }
- 
+
 export default ProjectList;

@@ -15,9 +15,13 @@ class App extends Component {
         <Navbar />
 
         <Switch>
-          <Route exact path="/projects" component={ProjectList}/>
+          <Route exact path="/projects" component={ProjectList} />
           <Route exact path="/projects/:id" component={ProjectDetails} />
-          <Route exact path="/projects/:id/tasks/:taskId" component={TaskDetails} /> 
+          <Route
+            exact
+            path="/projects/:id/tasks/:taskId"
+            component={TaskDetails}
+          />
         </Switch>
       </div>
     );
