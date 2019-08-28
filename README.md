@@ -9,9 +9,9 @@
 
 
 ```bash
-git clone https://github.com/ross-u/Redux-Code-Example-.git
+git clone https://github.com/ross-u/redux-intro-and-setup.git
 
-cd Redux-Code-Example
+cd redux-intro-and-setup
 
 # Switch to the branch `starter-code`
 git checkout starter-code
