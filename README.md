@@ -853,10 +853,6 @@ const mapDispatchToProps = dispatch => {
 
 
 
-![img](/home/ross-u/Desktop/IronHack_lectures_done/content/module3/02-Week2/Day 3/react-redux-overview.png)
-
-
-
 
 
 
@@ -879,4 +875,4 @@ Redux works on a principle of **one way data flow**
 
 
 
-Before starting read about the [`combineReducers`](https://redux.js.org/api/combinereducers) method of `redux` and go through the first 10 videos on this [playlist](https://egghead.io/courses/getting-started-with-redux). 
+Before starting read about the `combineReducers` method of `redux` and go through the first 10 videos on this [playlist](). 
