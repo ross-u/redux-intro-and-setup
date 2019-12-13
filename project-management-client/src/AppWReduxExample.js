@@ -35,15 +35,18 @@ const reducer = (storeState = initialState, action) => {
 // CREATE THE STORE
 const store = createStore(reducer);
 
-// ACTION - is command / object with `type`. It can also have payload of data to be placed in the store state.
-// action is given to the Reducer as a command.
-const action1 = { type: 'ADD_PROJECT', data: 'Project 1'};
 
 //  SUBSCRIBE TO CHANGES IN STATE
 store.subscribe( ()=> {
   console.log('State changed');
   console.log( store.getState() );
-})
+});
+
+
+// ACTION - is command / object with `type`. It can also have payload of data to be placed in the store state.
+// action is given to the Reducer as a command.
+const action1 = { type: 'ADD_PROJECT', data: 'Project 1'};
+
 
 // DISPATCHING THE TASK / ACTION TO THE REDUCER
 store.dispatch(action1);
