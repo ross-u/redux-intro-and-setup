@@ -7,7 +7,7 @@ const populate = () => {
       if (projects.length === 0) {
         const seed = require('./seed.json');
 
-        Project.create()
+        Project.create(seed)
           .then(newProjects => {
             console.log('----> Populating DB with seed data.');
             console.log(`---->  ‎✔	Created ${newProjects.length} documents.`);
